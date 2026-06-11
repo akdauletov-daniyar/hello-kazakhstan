@@ -2,7 +2,7 @@
 .wrap {
   position: relative;
   z-index: 2;
-  margin-top: calc(-1 * var(--space-xl));
+  margin-top: calc(-1 * var(--space-32));
   margin-bottom: var(--space-32);
 }
 
