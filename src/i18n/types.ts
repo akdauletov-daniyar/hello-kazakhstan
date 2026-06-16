@@ -62,7 +62,10 @@ export interface Dictionary {
     eyebrow: string
     heading: string
     summary: string
-    items: { name: string; from: string; quote: string }[]
+    /** accessible label for the carousel region */
+    carouselLabel: string
+    prev: string
+    next: string
   }
   cta: {
     eyebrow: string

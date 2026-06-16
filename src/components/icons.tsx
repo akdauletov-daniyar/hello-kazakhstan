@@ -168,3 +168,19 @@ export function ChevronDownIcon({ size = 16, ...props }: IconProps) {
     </svg>
   )
 }
+
+export function ChevronLeftIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <svg {...base({ size, ...props })}>
+      <path d="m15 18-6-6 6-6" />
+    </svg>
+  )
+}
+
+export function ChevronRightIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <svg {...base({ size, ...props })}>
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  )
+}

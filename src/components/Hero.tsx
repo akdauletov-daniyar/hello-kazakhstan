@@ -14,7 +14,6 @@ export function Hero() {
           className={styles.photoImg}
           src="/images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash.jpg"
           alt={t.hero.photoCredit}
-          fetchPriority="high"
           decoding="async"
         />
       </div>

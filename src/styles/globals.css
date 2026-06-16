@@ -73,6 +73,20 @@ h3 {
   color: var(--c-ink);
 }
 
+/* Russian: Bebas Neue has no Cyrillic glyphs, so titles fall back awkwardly.
+   Use SF Pro Display for all display/title text and tune the typography so it
+   reads as a proper title rather than thin oversized body text. */
+:root[lang='ru'] {
+  --font-display: 'SF Pro Display', -apple-system, system-ui, 'Inter', sans-serif;
+  --tracking-display: normal;
+}
+:root[lang='ru'] h1,
+:root[lang='ru'] h2,
+:root[lang='ru'] h3 {
+  font-weight: 700;
+  line-height: 1.08;
+}
+
 /* ---- Accessibility ----------------------------------------------------- */
 :focus-visible {
   outline: 3px solid var(--c-primary);

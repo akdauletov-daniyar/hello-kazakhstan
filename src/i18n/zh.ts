@@ -79,25 +79,11 @@ export const zh: Dictionary = {
   },
   reviews: {
     eyebrow: '评价',
-    heading: '与我们同行的旅客',
+    heading: '客户的真实评价',
     summary: '5.0（逾 1,500 位旅客）',
-    items: [
-      {
-        name: 'Sofia',
-        from: '西班牙',
-        quote: '日出时分的恰伦大峡谷几乎空无一人。一天下来，向导就像我们的朋友。',
-      },
-      {
-        name: 'James',
-        from: '英国',
-        quote: '通过 WhatsApp 直接预订，价格公道，没有意外。科尔赛与凯恩迪的两天行程是我们这个月的亮点。',
-      },
-      {
-        name: 'Mei',
-        from: '新加坡',
-        quote: '他们为我们定制了整条路线，从不催促。大阿拉木图湖美得不真实——而且我们还赶上了晚餐。',
-      },
-    ],
+    carouselLabel: '客户评价',
+    prev: '上一条评价',
+    next: '下一条评价',
   },
   cta: {
     eyebrow: '随时为你准备',

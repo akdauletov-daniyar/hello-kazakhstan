@@ -83,28 +83,11 @@ export const en: Dictionary = {
   },
   reviews: {
     eyebrow: 'Reviews',
-    heading: 'Travellers who came with us',
+    heading: 'Reviews from our clients',
     summary: '5.0 (1,500+ travellers)',
-    items: [
-      {
-        name: 'Sofia',
-        from: 'Spain',
-        quote:
-          'Charyn Canyon at sunrise with almost no one around. Our guide felt like a friend by the end of the day.',
-      },
-      {
-        name: 'James',
-        from: 'United Kingdom',
-        quote:
-          'Booked direct over WhatsApp, fair price, no surprises. The Kolsai and Kaindy two-day trip was the highlight of our month.',
-      },
-      {
-        name: 'Mei',
-        from: 'Singapore',
-        quote:
-          'They tailored the whole route to us and never rushed. Big Almaty Lake was unreal — and we were back in time for dinner.',
-      },
-    ],
+    carouselLabel: 'Client reviews',
+    prev: 'Previous review',
+    next: 'Next review',
   },
   cta: {
     eyebrow: 'Ready when you are',
