@@ -38,9 +38,3 @@ src/
   App.tsx       assembles the page
   main.tsx      entry — wraps App in <I18nProvider>
 ```
-
-## Things to wire up before launch
-
-- `src/data/copy.ts` — replace the placeholder WhatsApp number (`0000000000`).
-- All `PhotoPlaceholder` usages — swap for real `<img>` with `loading="lazy"`, keeping the existing `alt` text.
-- `src/i18n/{ru,zh,ar}.ts` — currently fully translated; have a native speaker proof them.
