@@ -1,4 +1,5 @@
 import type { DayTour } from '../data/dayTours'
+import { useI18n } from '../i18n'
 import styles from './DayToursSection.module.css'
 
 interface DayToursSectionProps {
@@ -9,11 +10,12 @@ interface DayToursSectionProps {
 }
 
 /**
- * Image-led tour cards: a 4:3 photo with the title and description overlaid
- * at the bottom over a soft scrim. Used for the "Multiple day tours" and
- * "1 Day tours" sections directly under the hero.
+ * Image-led tour cards: a 3:4 (vertical) photo with the title and description
+ * overlaid at the bottom over a soft scrim. Used for the "Multiple day tours"
+ * and "1 Day tours" sections directly under the hero.
  */
 export function DayToursSection({ id, headingId, heading, items }: DayToursSectionProps) {
+  const { lang } = useI18n()
   return (
     <section id={id} className={styles.section} aria-labelledby={headingId}>
       <div className="container">
@@ -23,18 +25,18 @@ export function DayToursSection({ id, headingId, heading, items }: DayToursSecti
 
         <ul className={styles.grid}>
           {items.map((tour) => (
-            <li key={tour.title} className={styles.card}>
+            <li key={tour.title.en} className={styles.card}>
               <img
                 className={styles.img}
                 src={tour.image}
-                alt={tour.alt}
+                alt={tour.alt[lang]}
                 loading="lazy"
                 decoding="async"
               />
               <div className={styles.scrim} />
               <div className={styles.content}>
-                <h3 className={styles.title}>{tour.title}</h3>
-                <p className={styles.desc}>{tour.description}</p>
+                <h3 className={styles.title}>{tour.title[lang]}</h3>
+                <p className={styles.desc}>{tour.description[lang]}</p>
               </div>
             </li>
           ))}

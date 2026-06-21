@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useT } from '../i18n'
 import { navLinks, socials, whatsappLink } from '../data/copy'
 import styles from './Footer.module.css'
@@ -9,7 +10,7 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brandCol}>
-          <a href="#top" className={styles.brand}>
+          <Link to="/" className={styles.brand}>
             <img
               className={styles.mark}
               src="/logo/logo.svg"
@@ -19,7 +20,7 @@ export function Footer() {
               height={44}
             />
             <span className={styles.brandName}>Hello Kazakhstan</span>
-          </a>
+          </Link>
           <p className={styles.tagline}>{t.footer.tagline}</p>
         </div>
 
@@ -28,9 +29,9 @@ export function Footer() {
           <ul>
             {navLinks.map((link) => (
               <li key={link.key}>
-                <a href={link.href} className={styles.link}>
+                <Link to={`/${link.href}`} className={styles.link}>
                   {t.nav[link.key]}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

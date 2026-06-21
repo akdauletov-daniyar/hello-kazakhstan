@@ -169,6 +169,41 @@ export function ChevronDownIcon({ size = 16, ...props }: IconProps) {
   )
 }
 
+export function ArrowLeftIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M19 12H5M11 18l-6-6 6-6" />
+    </svg>
+  )
+}
+
+export function CheckIcon({ size = 20, ...props }: IconProps) {
+  return (
+    <svg {...base({ size, ...props })}>
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  )
+}
+
+export function CalendarIcon({ size = 22, ...props }: IconProps) {
+  return (
+    <svg {...base({ size, ...props })}>
+      <rect x="3" y="4.5" width="18" height="16" rx="2.5" />
+      <path d="M3 9h18M8 2.5v4M16 2.5v4" />
+    </svg>
+  )
+}
+
+export function UsersIcon({ size = 22, ...props }: IconProps) {
+  return (
+    <svg {...base({ size, ...props })}>
+      <path d="M16 20v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20" />
+      <circle cx="9" cy="7" r="3.2" />
+      <path d="M16.5 14.2a4 4 0 0 1 3.5 3.96V20M15 4.3a3.2 3.2 0 0 1 0 6.1" />
+    </svg>
+  )
+}
+
 export function ChevronLeftIcon({ size = 24, ...props }: IconProps) {
   return (
     <svg {...base({ size, ...props })}>

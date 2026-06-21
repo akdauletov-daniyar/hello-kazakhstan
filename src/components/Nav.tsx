@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useT } from '../i18n'
 import { navLinks, whatsappLink } from '../data/copy'
 import { Button } from './Button'
@@ -29,7 +30,7 @@ export function Nav() {
   return (
     <header className={[styles.nav, scrolled ? styles.scrolled : ''].join(' ')}>
       <div className={`container ${styles.inner}`}>
-        <a href="#top" className={styles.brand} aria-label="Hello Kazakhstan — home">
+        <Link to="/" className={styles.brand} aria-label="Hello Kazakhstan — home">
           <img
             className={styles.mark}
             src="/logo/logo.svg"
@@ -42,13 +43,13 @@ export function Nav() {
             <span className={styles.brandName}>Hello Kazakhstan</span>
             <span className={styles.brandTag}>{t.nav.brandTagline}</span>
           </span>
-        </a>
+        </Link>
 
         <nav className={styles.links} aria-label="Primary">
           {navLinks.map((link) => (
-            <a key={link.key} href={link.href} className={styles.link}>
+            <Link key={link.key} to={`/${link.href}`} className={styles.link}>
               {t.nav[link.key]}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -82,14 +83,14 @@ export function Nav() {
         <div className={styles.sheet}>
           <nav className={styles.sheetLinks} aria-label="Mobile">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.key}
-                href={link.href}
+                to={`/${link.href}`}
                 className={styles.sheetLink}
                 onClick={() => setMenuOpen(false)}
               >
                 {t.nav[link.key]}
-              </a>
+              </Link>
             ))}
           </nav>
           <Button

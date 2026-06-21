@@ -1,47 +1,53 @@
+import { useEffect } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
-import { HeroSection } from './sections/HeroSection'
-import { TrustSection } from './sections/TrustSection'
-import { DayToursSection } from './sections/DayToursSection'
-import { multiDayTours, oneDayTours } from './data/dayTours'
-import { ToursSection } from './sections/ToursSection'
-import { MarqueeBand } from './sections/MarqueeBand'
-import { WhyChooseSection } from './sections/WhyChooseSection'
-import { AboutSection } from './sections/AboutSection'
-import { ReviewsSection } from './sections/ReviewsSection'
-import { CTASection } from './sections/CTASection'
+import { HomePage } from './pages/HomePage'
+import { TourDetailPage } from './pages/TourDetailPage'
+
+/**
+ * On navigation: scroll to the hash target if there is one (so the nav's
+ * "#tours" style links work from any page), otherwise scroll to the top.
+ */
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.slice(1)
+      // wait a frame for the destination page to render
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    } else {
+      window.scrollTo({ top: 0, left: 0 })
+    }
+  }, [pathname, hash])
+
+  return null
+}
 
 export default function App() {
+  const { pathname } = useLocation()
+  // the tour detail page is a focused, full-bleed layout — no footer
+  const showFooter = !pathname.startsWith('/tours/')
+
   return (
     <>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <span id="top" />
+      <ScrollManager />
       <Nav />
       <main id="main">
-        <HeroSection />
-        <TrustSection />
-        <DayToursSection
-          id="multi-day-tours"
-          headingId="multi-day-heading"
-          heading="Multiple day tours"
-          items={multiDayTours}
-        />
-        <DayToursSection
-          id="one-day-tours"
-          headingId="one-day-heading"
-          heading="1 Day tours"
-          items={oneDayTours}
-        />
-        <ToursSection />
-        <MarqueeBand />
-        <WhyChooseSection />
-        <AboutSection />
-        <ReviewsSection />
-        <CTASection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tours/:slug" element={<TourDetailPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
-      <Footer />
+      {showFooter && <Footer />}
     </>
   )
 }

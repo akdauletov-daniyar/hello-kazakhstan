@@ -73,6 +73,64 @@ export interface Dictionary {
     sub: string
     bookNow: string
   }
+  tourDetail: {
+    back: string
+    startingFrom: string
+    perPerson: string
+    durationLabel: string
+    groupLabel: string
+    ratingLabel: string
+    aboutHeading: string
+    highlightsHeading: string
+    includedHeading: string
+    pricingHeading: string
+    groupSize: string
+    pricePerPerson: string
+    pricingNote: string
+    bookNow: string
+    notFoundTitle: string
+    notFoundBody: string
+    browseAll: string
+  }
+  /* shared, enumerated catalogue labels (categories, regions, durations,
+     services, group-size labels) plus the day-tour section headings */
+  catalog: {
+    sectionMultiDay: string
+    sectionOneDay: string
+    groupType: string
+    categories: {
+      canyons: string
+      lakes: string
+      mountains: string
+      desertWildlife: string
+      cityEscape: string
+    }
+    regions: {
+      almatyRegion: string
+      tienShan: string
+      almaty: string
+    }
+    durationShort: { d1: string; d2n1: string; d3n2: string }
+    durationLong: { d1: string; d2n1: string; d3n2: string }
+    people: { one: string; two: string; three: string; fourPlus: string }
+    services: {
+      pickup: string
+      transport: string
+      transport4x4: string
+      guide: string
+      parkFees: string
+      allFees: string
+      lunch: string
+      packedLunch: string
+      breakfastDinner: string
+      water: string
+      stay1: string
+      stay2: string
+      cableCar: string
+      kokTobe: string
+      borderPermit: string
+    }
+  }
   footer: {
     tagline: string
     contactHeading: string
