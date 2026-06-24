@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Tour } from '../data/tours'
 import { whatsappLink } from '../data/copy'
+import { responsiveImage } from '../data/images'
 import { useI18n } from '../i18n'
 import { Badge } from './Badge'
 import { Pill } from './Pill'
@@ -33,7 +34,8 @@ export function TourCard({ tour, isFavourite, onToggleFavourite }: TourCardProps
           to={tour.placeholder.to}
           ratio="4 / 3"
           showTag={false}
-          src={tour.image}
+          {...responsiveImage(tour.image)}
+          sizes="(max-width: 560px) 92vw, (max-width: 900px) 45vw, 344px"
         />
 
         <div className={styles.topLeft}>

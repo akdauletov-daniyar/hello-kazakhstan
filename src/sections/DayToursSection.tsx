@@ -1,4 +1,5 @@
 import type { DayTour } from '../data/dayTours'
+import { responsiveImage } from '../data/images'
 import { useI18n } from '../i18n'
 import styles from './DayToursSection.module.css'
 
@@ -24,11 +25,15 @@ export function DayToursSection({ id, headingId, heading, items }: DayToursSecti
         </h2>
 
         <ul className={styles.grid}>
-          {items.map((tour) => (
+          {items.map((tour) => {
+            const photo = responsiveImage(tour.image)
+            return (
             <li key={tour.title.en} className={styles.card}>
               <img
                 className={styles.img}
-                src={tour.image}
+                src={photo.src}
+                srcSet={photo.srcSet}
+                sizes="(max-width: 560px) 92vw, (max-width: 900px) 45vw, 344px"
                 alt={tour.alt[lang]}
                 loading="lazy"
                 decoding="async"
@@ -39,7 +44,8 @@ export function DayToursSection({ id, headingId, heading, items }: DayToursSecti
                 <p className={styles.desc}>{tour.description[lang]}</p>
               </div>
             </li>
-          ))}
+            )
+          })}
         </ul>
       </div>
     </section>

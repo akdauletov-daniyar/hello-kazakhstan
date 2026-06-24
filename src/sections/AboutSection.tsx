@@ -1,6 +1,7 @@
 import { useT } from '../i18n'
 import { Button } from '../components/Button'
 import { PhotoPlaceholder } from '../components/PhotoPlaceholder'
+import { responsiveImage } from '../data/images'
 import styles from './AboutSection.module.css'
 
 export function AboutSection() {
@@ -16,7 +17,8 @@ export function AboutSection() {
             to="#0b3a44"
             ratio="4 / 5"
             rounded
-            src="/images/kate-ibragimova-550LbH6zDU8-unsplash.jpg"
+            {...responsiveImage('/images/kate-ibragimova-550LbH6zDU8-unsplash.jpg')}
+            sizes="(max-width: 768px) 92vw, 420px"
           />
         </div>
         <div className={styles.text}>

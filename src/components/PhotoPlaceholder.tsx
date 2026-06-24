@@ -14,6 +14,11 @@ interface PhotoPlaceholderProps {
   /** real image URL. When set, renders an <img>; the gradient stays as a
    *  loading backdrop. When omitted, falls back to the gradient stand-in. */
   src?: string
+  /** responsive candidates + sizes hint for the rendered <img> */
+  srcSet?: string
+  sizes?: string
+  /** load eagerly with high priority (use for above-the-fold images) */
+  priority?: boolean
 }
 
 /**
@@ -30,6 +35,9 @@ export function PhotoPlaceholder({
   rounded = false,
   showTag = true,
   src,
+  srcSet,
+  sizes,
+  priority = false,
 }: PhotoPlaceholderProps) {
   return (
     <div
@@ -43,7 +51,15 @@ export function PhotoPlaceholder({
       {...(src ? {} : { role: 'img', 'aria-label': alt })}
     >
       {src ? (
-        <img className={styles.img} src={src} alt={alt} loading="lazy" decoding="async" />
+        <img
+          className={styles.img}
+          src={src}
+          srcSet={srcSet}
+          sizes={sizes}
+          alt={alt}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+        />
       ) : (
         <>
           {showTag && <span className={styles.tag}>Photo</span>}
