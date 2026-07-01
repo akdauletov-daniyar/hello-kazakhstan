@@ -1,35 +1,39 @@
 import { useState } from 'react'
-import { tours } from '../data/tours'
-import { useT } from '../i18n'
-import { SectionHeading } from '../components/SectionHeading'
+import { toursByGroup, type TourGroup } from '../data/tours'
 import { TourCard } from '../components/TourCard'
 import styles from './ToursSection.module.css'
 
-export function ToursSection() {
-  const t = useT()
+interface ToursSectionProps {
+  id: string
+  group: TourGroup
+  heading: string
+  /** render the #regions scroll anchor (only on the first tours section) */
+  regionsAnchor?: boolean
+}
+
+export function ToursSection({ id, group, heading, regionsAnchor }: ToursSectionProps) {
   // Favourite hearts are local-only state, keyed by tour id.
   const [favourites, setFavourites] = useState<Set<string>>(() => new Set())
 
-  const toggleFavourite = (id: string) =>
+  const toggleFavourite = (tourId: string) =>
     setFavourites((prev) => {
       const next = new Set(prev)
-      next.has(id) ? next.delete(id) : next.add(id)
+      next.has(tourId) ? next.delete(tourId) : next.add(tourId)
       return next
     })
 
+  const list = toursByGroup(group)
+  const headingId = `${id}-heading`
+
   return (
-    <section id="tours" className="section" aria-labelledby="tours-heading">
-      {/* #regions anchor — tours are organised by region */}
-      <span id="regions" className={styles.anchor} aria-hidden="true" />
+    <section id={id} className={styles.section} aria-labelledby={headingId}>
+      {regionsAnchor && <span id="regions" className={styles.anchor} aria-hidden="true" />}
       <div className="container">
-        <SectionHeading
-          eyebrow={t.tours.eyebrow}
-          title={t.tours.heading}
-          sub={t.tours.sub}
-          id="tours-heading"
-        />
+        <h2 className={styles.heading} id={headingId}>
+          {heading}
+        </h2>
         <div className={styles.grid}>
-          {tours.map((tour) => (
+          {list.map((tour) => (
             <TourCard
               key={tour.id}
               tour={tour}

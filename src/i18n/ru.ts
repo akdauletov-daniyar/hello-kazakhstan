@@ -125,6 +125,7 @@ export const ru: Dictionary = {
       mountains: 'Горы',
       desertWildlife: 'Пустыня и дикая природа',
       cityEscape: 'Городской отдых',
+      culture: 'Культура',
     },
     regions: {
       almatyRegion: 'Алматинская область',
@@ -138,10 +139,14 @@ export const ru: Dictionary = {
       d3n2: '3 дня, 2 ночи',
     },
     people: {
-      one: '1 человек',
-      two: '2 человека',
-      three: '3 человека',
-      fourPlus: '4+ человека',
+      p1: '1 человек',
+      p2: '2 человека',
+      p3: '3 человека',
+      p4: '4 человека',
+      p5: '5 человек',
+      p6: '6 человек',
+      p7: '7 человек',
+      p8: '8 человек',
     },
     services: {
       pickup: 'Трансфер от отеля и обратно',

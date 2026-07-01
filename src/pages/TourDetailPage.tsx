@@ -137,8 +137,8 @@ export function TourDetailPage() {
             </thead>
             <tbody>
               {tour.pricing.map((row) => (
-                <tr key={row.size}>
-                  <td>{t.catalog.people[row.size]}</td>
+                <tr key={row.people}>
+                  <td>{t.catalog.people[`p${row.people}` as keyof typeof t.catalog.people]}</td>
                   <td className={styles.tablePrice}>${row.price}</td>
                 </tr>
               ))}

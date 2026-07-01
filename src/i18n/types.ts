@@ -104,6 +104,7 @@ export interface Dictionary {
       mountains: string
       desertWildlife: string
       cityEscape: string
+      culture: string
     }
     regions: {
       almatyRegion: string
@@ -112,7 +113,17 @@ export interface Dictionary {
     }
     durationShort: { d1: string; d2n1: string; d3n2: string }
     durationLong: { d1: string; d2n1: string; d3n2: string }
-    people: { one: string; two: string; three: string; fourPlus: string }
+    /** group-size labels for 1..8 people (matches the price table) */
+    people: {
+      p1: string
+      p2: string
+      p3: string
+      p4: string
+      p5: string
+      p6: string
+      p7: string
+      p8: string
+    }
     services: {
       pickup: string
       transport: string

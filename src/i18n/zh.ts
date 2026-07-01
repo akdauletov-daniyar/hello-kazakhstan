@@ -120,6 +120,7 @@ export const zh: Dictionary = {
       mountains: '群山',
       desertWildlife: '沙漠与野生动物',
       cityEscape: '城市漫游',
+      culture: '文化',
     },
     regions: {
       almatyRegion: '阿拉木图地区',
@@ -133,10 +134,14 @@ export const zh: Dictionary = {
       d3n2: '3 天 2 夜',
     },
     people: {
-      one: '1 人',
-      two: '2 人',
-      three: '3 人',
-      fourPlus: '4 人以上',
+      p1: '1 人',
+      p2: '2 人',
+      p3: '3 人',
+      p4: '4 人',
+      p5: '5 人',
+      p6: '6 人',
+      p7: '7 人',
+      p8: '8 人',
     },
     services: {
       pickup: '酒店接送',
