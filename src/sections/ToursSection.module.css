@@ -1,3 +1,19 @@
+/* own vertical rhythm so the two stacked tour sections (multi-day / one-day)
+   sit closer together than two unrelated sections */
+.section {
+  padding-block: var(--space-64);
+}
+.section + .section {
+  padding-top: 0;
+}
+
+.heading {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  color: var(--c-primary);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

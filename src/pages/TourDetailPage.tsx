@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { getTourBySlug } from '../data/tours'
 import { whatsappLink } from '../data/copy'
+import { responsiveImage } from '../data/images'
 import { useI18n } from '../i18n'
 import { Button } from '../components/Button'
 import {
@@ -41,7 +42,8 @@ export function TourDetailPage() {
       <div className={styles.media}>
         <img
           className={styles.img}
-          src={tour.image}
+          {...responsiveImage(tour.image)}
+          sizes="(max-width: 900px) 100vw, 560px"
           alt={tour.alt[lang]}
           decoding="async"
         />
@@ -135,8 +137,8 @@ export function TourDetailPage() {
             </thead>
             <tbody>
               {tour.pricing.map((row) => (
-                <tr key={row.size}>
-                  <td>{t.catalog.people[row.size]}</td>
+                <tr key={row.people}>
+                  <td>{t.catalog.people[`p${row.people}` as keyof typeof t.catalog.people]}</td>
                   <td className={styles.tablePrice}>${row.price}</td>
                 </tr>
               ))}

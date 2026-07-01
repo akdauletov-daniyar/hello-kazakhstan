@@ -1,7 +1,5 @@
 import { HeroSection } from '../sections/HeroSection'
 import { TrustSection } from '../sections/TrustSection'
-import { DayToursSection } from '../sections/DayToursSection'
-import { multiDayTours, oneDayTours } from '../data/dayTours'
 import { ToursSection } from '../sections/ToursSection'
 import { MarqueeBand } from '../sections/MarqueeBand'
 import { WhyChooseSection } from '../sections/WhyChooseSection'
@@ -16,19 +14,18 @@ export function HomePage() {
     <>
       <HeroSection />
       <TrustSection />
-      <DayToursSection
-        id="multi-day-tours"
-        headingId="multi-day-heading"
+      {/* the catalogue, split into the operator's two groups */}
+      <ToursSection
+        id="tours"
+        group="multiDay"
         heading={t.catalog.sectionMultiDay}
-        items={multiDayTours}
+        regionsAnchor
       />
-      <DayToursSection
+      <ToursSection
         id="one-day-tours"
-        headingId="one-day-heading"
+        group="oneDay"
         heading={t.catalog.sectionOneDay}
-        items={oneDayTours}
       />
-      <ToursSection />
       <MarqueeBand />
       <WhyChooseSection />
       <AboutSection />

@@ -1,9 +1,13 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
 import { HomePage } from './pages/HomePage'
-import { TourDetailPage } from './pages/TourDetailPage'
+
+// the tour detail page is a separate route — split it out of the initial bundle
+const TourDetailPage = lazy(() =>
+  import('./pages/TourDetailPage').then((m) => ({ default: m.TourDetailPage })),
+)
 
 /**
  * On navigation: scroll to the hash target if there is one (so the nav's
@@ -41,11 +45,13 @@ export default function App() {
       <ScrollManager />
       <Nav />
       <main id="main">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/tours/:slug" element={<TourDetailPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tours/:slug" element={<TourDetailPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
       </main>
       {showFooter && <Footer />}
     </>

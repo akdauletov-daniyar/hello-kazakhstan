@@ -10,8 +10,13 @@
 
   <!-- Fonts are self-hosted via @font-face in src/styles/fonts.css.
          Preload the two faces above the fold (display + body regular). -->
-  <link rel="preload" href="/fonts/BebasNeue-Regular.ttf" as="font" type="font/ttf" crossorigin />
-  <link rel="preload" href="/fonts/SF-Pro-Display-Regular.otf" as="font" type="font/otf" crossorigin />
+  <link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Preload the hero image (LCP) so the browser fetches the right size early. -->
+  <link rel="preload" as="image" type="image/webp"
+    imagesrcset="/images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash-480.webp 480w, /images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash-800.webp 800w, /images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash-1280.webp 1280w, /images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash-1920.webp 1920w"
+    imagesizes="100vw" />
 
   <title>Hello Kazakhstan — Experience Kazakhstan like a local</title>
 </head>

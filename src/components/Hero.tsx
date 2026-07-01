@@ -1,8 +1,11 @@
 import { useT } from '../i18n'
 import { whatsappLink } from '../data/copy'
+import { responsiveImage } from '../data/images'
 import { Button } from './Button'
 import { WhatsAppIcon } from './icons'
 import styles from './Hero.module.css'
+
+const heroImage = responsiveImage('/images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash.jpg')
 
 export function Hero() {
   const t = useT()
@@ -10,9 +13,12 @@ export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.photo}>
+        {/* LCP image: eager-loaded and preloaded (with priority) in index.html */}
         <img
           className={styles.photoImg}
-          src="/images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash.jpg"
+          src={heroImage.src}
+          srcSet={heroImage.srcSet}
+          sizes="100vw"
           alt={t.hero.photoCredit}
           decoding="async"
         />

@@ -124,6 +124,7 @@ export const en: Dictionary = {
       mountains: 'Mountains',
       desertWildlife: 'Desert & wildlife',
       cityEscape: 'City escape',
+      culture: 'Culture',
     },
     regions: {
       almatyRegion: 'Almaty region',
@@ -137,10 +138,14 @@ export const en: Dictionary = {
       d3n2: '3 days, 2 nights',
     },
     people: {
-      one: '1 person',
-      two: '2 people',
-      three: '3 people',
-      fourPlus: '4+ people',
+      p1: '1 person',
+      p2: '2 people',
+      p3: '3 people',
+      p4: '4 people',
+      p5: '5 people',
+      p6: '6 people',
+      p7: '7 people',
+      p8: '8 people',
     },
     services: {
       pickup: 'Hotel pick-up & drop-off',

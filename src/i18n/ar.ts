@@ -120,6 +120,7 @@ export const ar: Dictionary = {
       mountains: 'الجبال',
       desertWildlife: 'الصحراء والحياة البرّية',
       cityEscape: 'استراحة في المدينة',
+      culture: 'الثقافة',
     },
     regions: {
       almatyRegion: 'منطقة ألماتي',
@@ -133,10 +134,14 @@ export const ar: Dictionary = {
       d3n2: '3 أيام وليلتان',
     },
     people: {
-      one: 'شخص واحد',
-      two: 'شخصان',
-      three: '3 أشخاص',
-      fourPlus: '4 أشخاص فأكثر',
+      p1: 'شخص واحد',
+      p2: 'شخصان',
+      p3: '3 أشخاص',
+      p4: '4 أشخاص',
+      p5: '5 أشخاص',
+      p6: '6 أشخاص',
+      p7: '7 أشخاص',
+      p8: '8 أشخاص',
     },
     services: {
       pickup: 'الاستقبال والتوصيل من الفندق',
