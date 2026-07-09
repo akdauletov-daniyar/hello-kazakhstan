@@ -18,7 +18,7 @@ export const en: Dictionary = {
     sub: 'Private and small-group tours around Almaty — Charyn Canyon, the Kolsai and Kaindy lakes, the mountains. No crowds, no middlemen, and we stay with you the whole way.',
     exploreTours: 'Explore tours →',
     bookNow: 'Book now',
-    photoCredit: 'Aerial view over the Tien Shan foothills near Almaty',
+    photoCredit: 'Aerial view of Charyn Canyon at sunset near Almaty',
   },
   trust: {
     secureTitle: 'Secure booking',

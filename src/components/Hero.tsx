@@ -5,7 +5,7 @@ import { Button } from './Button'
 import { WhatsAppIcon } from './icons'
 import styles from './Hero.module.css'
 
-const heroImage = responsiveImage('/images/vitaly-eroshenko-Ti_mEGZqpt4-unsplash.jpg')
+const heroImage = responsiveImage('/images/charyn5.jpg')
 
 export function Hero() {
   const t = useT()

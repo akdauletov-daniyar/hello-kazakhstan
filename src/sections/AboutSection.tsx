@@ -12,12 +12,12 @@ export function AboutSection() {
       <div className={`container ${styles.grid}`}>
         <div className={styles.media}>
           <PhotoPlaceholder
-            alt="The Hello Kazakhstan team standing by their vehicle at a mountain viewpoint above Almaty"
+            alt="A traveller taking in the turquoise first Kolsai lake in the Tien Shan mountains"
             from="#1f6f78"
             to="#0b3a44"
             ratio="4 / 5"
             rounded
-            {...responsiveImage('/images/kate-ibragimova-550LbH6zDU8-unsplash.jpg')}
+            {...responsiveImage('/images/kolsai4.jpg')}
             sizes="(max-width: 768px) 92vw, 420px"
           />
         </div>

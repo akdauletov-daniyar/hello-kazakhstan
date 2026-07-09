@@ -95,7 +95,7 @@ export const tours: Tour[] = [
     reviewCount: 96,
     bestseller: true,
     placeholder: { from: '#d9a441', to: '#9c6b1f' },
-    image: '/images/ilyas-dautov-sHKw-Am60Jc-unsplash.jpg',
+    image: '/images/altyn-emel10.jpg',
     title: {
       en: 'Altyn Emel National Park',
       ru: 'Национальный парк Алтын-Эмель',
@@ -141,7 +141,7 @@ export const tours: Tour[] = [
     rating: 5.0,
     reviewCount: 168,
     placeholder: { from: '#1f6f78', to: '#0c3b46' },
-    image: '/images/vitaly-eroshenko-Jd8CNAZ3Qws-unsplash.jpg',
+    image: '/images/kaindy1.jpg',
     title: {
       en: 'Kolsai, Kaindy, Charyn & Black Canyon',
       ru: 'Кольсай, Каинды, Чарын и Чёрный каньон',
@@ -188,7 +188,7 @@ export const tours: Tour[] = [
     reviewCount: 74,
     bestseller: true,
     placeholder: { from: '#a9552f', to: '#143f46' },
-    image: '/images/polina-skaia-ToJNyWpDn9I-unsplash.jpg',
+    image: '/images/charyn6.jpg',
     title: {
       en: 'Altyn Emel, Charyn Canyon, Kolsai & Kaindy',
       ru: 'Алтын-Эмель, Чарынский каньон, Кольсай и Каинды',
@@ -234,7 +234,7 @@ export const tours: Tour[] = [
     rating: 4.9,
     reviewCount: 61,
     placeholder: { from: '#2f8fa8', to: '#123f2e' },
-    image: '/images/marina-lambreht-GdjBEN8xXDM-unsplash.jpg',
+    image: '/images/issyk1.jpg',
     title: {
       en: 'Big Almaty, Issyk, Kolsai & Kaindy lakes',
       ru: 'Большое Алматинское, Иссык, Кольсай и Каинды',
@@ -283,7 +283,7 @@ export const tours: Tour[] = [
     reviewCount: 212,
     bestseller: true,
     placeholder: { from: '#b4582f', to: '#7a2f1c' },
-    image: '/images/tima-ilyasov-qs9-I9Eam94-unsplash.jpg',
+    image: '/images/charyn1.jpg',
     title: {
       en: 'Charyn Canyon — Black & Moon canyons',
       ru: 'Чарынский каньон — Чёрный и Лунный каньоны',
@@ -330,7 +330,7 @@ export const tours: Tour[] = [
     reviewCount: 304,
     bestseller: true,
     placeholder: { from: '#2f8fa8', to: '#13525f' },
-    image: '/images/andrey-zvyagintsev-FqL8ChjROIY-unsplash.jpg',
+    image: '/images/big-almaty-lake2.jpeg',
     title: {
       en: 'Big Almaty Lake & Ayu-Sai visit center',
       ru: 'Большое Алматинское озеро и визит-центр Аю-Сай',
@@ -377,7 +377,7 @@ export const tours: Tour[] = [
     reviewCount: 158,
     bestPrice: true,
     placeholder: { from: '#7a6f9c', to: '#3a3357' },
-    image: '/images/joy-s-kMadNKDqycc-unsplash.jpg',
+    image: '/images/almaty2.jpg',
     title: {
       en: 'Almaty city tour',
       ru: 'Обзорный тур по Алматы',
@@ -424,7 +424,7 @@ export const tours: Tour[] = [
     reviewCount: 341,
     bestPrice: true,
     placeholder: { from: '#5a7d8c', to: '#2b4651' },
-    image: '/images/chingiz-t-ow1CvIo_JRM-unsplash.jpg',
+    image: '/images/shymbulak5.jpg',
     title: {
       en: 'Medeu & Shymbulak',
       ru: 'Медеу и Шымбулак',
@@ -471,7 +471,7 @@ export const tours: Tour[] = [
     reviewCount: 87,
     bestPrice: true,
     placeholder: { from: '#2c7a5b', to: '#123f2e' },
-    image: '/images/marina-lambreht-GdjBEN8xXDM-unsplash.jpg',
+    image: '/images/kolsai1.jpg',
     title: {
       en: 'Kolsai lake',
       ru: 'Кольсайское озеро',
@@ -517,7 +517,7 @@ export const tours: Tour[] = [
     rating: 4.9,
     reviewCount: 118,
     placeholder: { from: '#1f6f78', to: '#0c3b46' },
-    image: '/images/vitaly-eroshenko-Jd8CNAZ3Qws-unsplash.jpg',
+    image: '/images/kolsai3.jpg',
     title: {
       en: 'Kolsai & Kaindy lakes',
       ru: 'Озёра Кольсай и Каинды',
@@ -563,7 +563,7 @@ export const tours: Tour[] = [
     rating: 4.9,
     reviewCount: 64,
     placeholder: { from: '#2c7a5b', to: '#7a2f1c' },
-    image: '/images/polina-skaia-ToJNyWpDn9I-unsplash.jpg',
+    image: '/images/charyn2.jpg',
     title: {
       en: 'Kolsai lake & Charyn Canyon',
       ru: 'Кольсайское озеро и Чарынский каньон',
@@ -609,7 +609,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 52,
     placeholder: { from: '#d9a441', to: '#9c6b1f' },
-    image: '/images/vitaly-eroshenko--4TCHYVkngg-unsplash.jpg',
+    image: '/images/altyn-emel16.jpg',
     title: {
       en: 'Altyn Emel National Park',
       ru: 'Национальный парк Алтын-Эмель',
@@ -655,7 +655,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 44,
     placeholder: { from: '#8a6d3b', to: '#3a2f1c' },
-    image: '/images/alexander-liebstuckel-E4z5M71dBbg-unsplash.jpg',
+    image: '/images/ethno-village2.jpg',
     title: {
       en: 'Ethno Village "The Hunns"',
       ru: 'Этно-деревня «Гунны»',

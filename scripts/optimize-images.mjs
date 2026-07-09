@@ -20,20 +20,23 @@ const QUALITY = 72
 
 await mkdir(OUT, { recursive: true })
 
-const files = (await readdir(SRC)).filter((f) => /\.(jpe?g|png)$/i.test(f))
+// optional CLI args = specific source filenames to process; otherwise, all
+const argv = process.argv.slice(2)
+const files = (argv.length ? argv : await readdir(SRC)).filter((f) =>
+  /\.(jpe?g|png)$/i.test(f),
+)
 let totalOut = 0
 
 for (const file of files) {
   const { name } = parse(file)
   const input = join(SRC, file)
-  const meta = await sharp(input).metadata()
 
+  // Always emit every width so `srcset`/`src` references never 404. Sources
+  // smaller than a target width are gently upscaled (a few low-res photos).
   for (const w of WIDTHS) {
-    // never upscale beyond the original width
-    if (meta.width && w > meta.width) continue
     const outPath = join(OUT, `${name}-${w}.webp`)
     const info = await sharp(input)
-      .resize({ width: w, withoutEnlargement: true })
+      .resize({ width: w })
       .webp({ quality: QUALITY, effort: 5 })
       .toFile(outPath)
     totalOut += info.size

@@ -19,7 +19,7 @@ export const zh: Dictionary = {
     sub: '阿拉木图周边的私人与小团行程——恰伦大峡谷、科尔赛湖与凯恩迪湖、群山。没有人潮，没有中间商，全程有我们陪伴。',
     exploreTours: '查看行程 →',
     bookNow: '立即预订',
-    photoCredit: '阿拉木图附近天山山麓的航拍视角',
+    photoCredit: '日落时分阿拉木图附近恰伦大峡谷的航拍景观',
   },
   trust: {
     secureTitle: '安全预订',
