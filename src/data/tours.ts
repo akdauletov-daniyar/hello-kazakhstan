@@ -95,7 +95,7 @@ export const tours: Tour[] = [
     reviewCount: 96,
     bestseller: true,
     placeholder: { from: '#d9a441', to: '#9c6b1f' },
-    image: '/images/altyn-emel5.jpg',
+    image: '/images/altyn-emel10.jpg',
     title: {
       en: 'Altyn Emel National Park',
       ru: 'Национальный парк Алтын-Эмель',
@@ -609,7 +609,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 52,
     placeholder: { from: '#d9a441', to: '#9c6b1f' },
-    image: '/images/altyn-emel16.jpg',
+    image: '/images/altyn-emel5.jpg',
     title: {
       en: 'Altyn Emel National Park',
       ru: 'Национальный парк Алтын-Эмель',
